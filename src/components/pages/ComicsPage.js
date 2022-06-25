@@ -1,12 +1,18 @@
+import {Route, Routes} from "react-router-dom";
+
 import AppBanner from './../appBanner/AppBanner';
 import ComicsList from './../comicsList/ComicsList';
 
 const ComicsPage = () => {
 	return (
 		<>
-			<AppBanner/>
-			<ComicsList /> 
-		</>
+         <AppBanner/>
+			<Routes>
+				<Route>
+					<Route path="/" element={<ComicsList/>}/>
+				</Route>
+			</Routes>
+      </>
 	);
 };
 
